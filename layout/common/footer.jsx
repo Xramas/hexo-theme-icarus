@@ -33,7 +33,7 @@ class Footer extends Component {
                         <a class="footer-logo is-block mb-2" href={siteUrl}>
                             {footerLogo}
                         </a>
-                        <p class="is-size-7">
+                        <p class="is-size-8">
                             <span dangerouslySetInnerHTML={{ __html: `&copy; ${siteYear} ${author || siteTitle}` }}></span>
                             &nbsp;&nbsp;Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">HEXO</a>&nbsp;&&nbsp;
                             <a href="https://github.com/xramas/hexo-theme-icarus" target="_blank" rel="noopener">ICARUS</a>
