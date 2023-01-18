@@ -1,3 +1,8 @@
+/*
+Obtain Cloudflare Node Information
+Author:Xramas
+Data:2023/1/18
+*/
 $(document).ready(
     $.ajax({
         url: "/cdn-cgi/trace",
