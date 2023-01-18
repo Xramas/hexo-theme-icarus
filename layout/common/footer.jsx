@@ -34,9 +34,9 @@ class Footer extends Component {
                             {footerLogo}
                         </a>
                         <p class="is-size-8"><span dangerouslySetInnerHTML={{ __html: `Copyright &copy; ${siteYear} ${author}. All rights reserved.` }}></span></p>
-                        <br>
+                        <br />
                         <p class="is-size-8">Server Node：<span id="ocni"></span></p>
-                        <br>
+                        <br />
                         <p class="is-size-8">
                             {showVisitorCounter ? <br /> : null}
                             {showVisitorCounter ? <span id="busuanzi_container_site_uv"dangerouslySetInnerHTML={{ __html: visitorCounterTitle }}></span> : null}
