@@ -33,7 +33,7 @@ class Footer extends Component {
                         <a class="footer-logo is-block mb-2" href={siteUrl}>
                             {footerLogo}
                         </a>
-                        <p class="is-size-8"><span dangerouslySetInnerHTML={{ __html: `Copyright &copy; ${siteYear} ${author}. All rights reserved.` }}></span></p>
+                        <p class="is-size-7"><span dangerouslySetInnerHTML={{ __html: `Copyright &copy; ${siteYear} ${author}. All rights reserved.` }}></span></p>
                         <br />
                         <p class="is-size-7">Server Node：<span id="ocni"></span></p>
                         <br />
