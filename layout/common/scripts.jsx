@@ -36,6 +36,7 @@ module.exports = class extends Component {
             <script dangerouslySetInnerHTML={{ __html: `moment.locale("${language}");` }}></script>
             <script dangerouslySetInnerHTML={{ __html: embeddedConfig }}></script>
             <script src={url_for('/js/column.js')}></script>
+            <script src={url_for('/js/ocni.js')}></script>
             <Plugins site={site} config={config} page={page} helper={helper} head={false} />
             <script src={url_for('/js/main.js')} defer></script>
         </Fragment>;
