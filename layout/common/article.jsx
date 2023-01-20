@@ -1,3 +1,4 @@
+const copy = page.copy_from ? url_for(page.copy_from) : null;
 const moment = require('moment');
 const { Component, Fragment } = require('inferno');
 const { toMomentLocale } = require('hexo/lib/plugins/helper/date');
@@ -5,6 +6,7 @@ const Share = require('./share');
 const Donates = require('./donates');
 const Comment = require('./comment');
 const ArticleLicensing = require('hexo-component-inferno/lib/view/misc/article_licensing');
+const CopyRight = require('./copyright');
 
 /**
  * Get the word count of text.
@@ -22,7 +24,7 @@ module.exports = class extends Component {
     render() {
         const { config, helper, page, index } = this.props;
         const { article, plugins } = config;
-        const { url_for, date, date_xml, __, _p } = helper;
+        const { url_for, date, date_xml, __, _p, is_post } = helper;
 
         const indexLaunguage = toMomentLocale(config.language || 'en');
         const language = toMomentLocale(page.lang || page.language || config.language || 'en');
@@ -46,6 +48,8 @@ module.exports = class extends Component {
                     {/* Metadata */}
                     {page.layout !== 'page' ? <div class="article-meta is-size-7 is-uppercase level is-mobile">
                         <div class="level-left">
+                            {/* 判断原创或者转载 */}
+                            <span class={`level-item copyright article-title type-${copy ? '1' : '2'}`}>{copy ? '转载' : '原创'}</span>
                             {/* Creation Date */}
                             {page.date && <span class="level-item" dangerouslySetInnerHTML={{
                                 __html: _p('article.created_at', `<time dateTime="${date_xml(page.date)}" title="${new Date(page.date).toLocaleString()}">${date(page.date)}</time>`)
@@ -84,6 +88,10 @@ module.exports = class extends Component {
                         </div>
                     </div> : null}
                     {/* Title */}
+                    <h1 class="title is-3 is-size-4-mobile"> {index ? <a class="link-muted" href={url_for(page.link || page.path)}>{page.title}</a> : page.title}
+                    </h1>
+                    { /* 版权声明 */}
+                    {is_post() ? <CopyRight config={config} page={page} helper={helper} /> : null}
                     {page.title !== '' ? <h1 class="title is-3 is-size-4-mobile">
                         {index ? <a class="link-muted" href={url_for(page.link || page.path)}>{page.title}</a> : page.title}
                     </h1> : null}
