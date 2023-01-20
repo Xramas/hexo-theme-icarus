@@ -2,13 +2,11 @@
 <img class="not-gallery-item" height="48" src="https://www.xramas.com/assets/logo.svg">
 <br> A simple, delicate, and modern theme for the static site generator Hexo.
 <br>
-<a href="https://ppoffice.github.io/hexo-theme-icarus/">Preview</a> |
-<a href="https://ppoffice.github.io/hexo-theme-icarus/categories/">Documentation</a> |
-<a href="https://github.com/ppoffice/hexo-theme-icarus/discussions">Discuss on GitHub</a>
+<a href="https://xramas.github.io/hexo-theme-icarus/">Preview</a> |
+<a href="https://xramas.github.io/hexo-theme-icarus/categories/">Documentation</a> |
+<a href="https://github.com/xramas/hexo-theme-icarus/discussions">Discuss on GitHub</a>
 <br>
 </p>
-
-![](https://ppoffice.github.io/hexo-theme-icarus/gallery/preview.png?1 "Icarus Preview")
 
 ## :cd: Installation
 
